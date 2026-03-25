@@ -8,22 +8,32 @@ This is a static portfolio site with modern CSS and JavaScript interactions.
 npm start
 ```
 
-Open this exact link in your browser:
+## Open on your computer
 
 - `http://127.0.0.1:4173`
 
-> Keep the terminal running while using the site. If you close it, the link stops working.
+## Open on your mobile phone (same Wi-Fi)
 
-## If the link still does not work
+1. Start the server with `npm start`.
+2. In the terminal, copy one of the `http://<your-local-ip>:4173` links printed under:
+   - `Open on mobile (same Wi-Fi):`
+3. Open that link on your phone browser.
 
-1. Check that the server is running and shows `Portfolio hosted locally at http://127.0.0.1:4173`.
-2. Try another port:
+Example:
+
+- `http://192.168.1.25:4173`
+
+## If mobile still does not work
+
+- Ensure phone and computer are on the same Wi-Fi network.
+- Allow Node.js through your firewall.
+- Try another port:
 
 ```bash
 PORT=8080 npm start
 ```
 
-Then open `http://127.0.0.1:8080`.
+Then use the printed mobile link with port `8080`.
 
 ## Validation
 

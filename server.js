@@ -1,8 +1,9 @@
 const http = require('http');
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 
-const host = process.env.HOST || '127.0.0.1';
+const host = process.env.HOST || '0.0.0.0';
 const port = Number(process.env.PORT) || 4173;
 const root = __dirname;
 
@@ -34,8 +35,15 @@ function sendFile(filePath, res) {
   });
 }
 
+function getLocalNetworkIps() {
+  return Object.values(os.networkInterfaces())
+    .flat()
+    .filter((details) => details && details.family === 'IPv4' && !details.internal)
+    .map((details) => details.address);
+}
+
 const server = http.createServer((req, res) => {
-  const parsedUrl = new URL(req.url, `http://${req.headers.host || `${host}:${port}`}`);
+  const parsedUrl = new URL(req.url, `http://${req.headers.host || `127.0.0.1:${port}`}`);
   const pathname = decodeURIComponent(parsedUrl.pathname);
   const requestedPath = pathname === '/' ? '/index.html' : pathname;
 
@@ -52,5 +60,13 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, host, () => {
-  console.log(`Portfolio hosted locally at http://${host}:${port}`);
+  console.log(`Portfolio hosted locally at http://127.0.0.1:${port}`);
+
+  const networkIps = getLocalNetworkIps();
+  if (networkIps.length > 0) {
+    console.log('Open on mobile (same Wi-Fi):');
+    networkIps.forEach((ip) => {
+      console.log(`http://${ip}:${port}`);
+    });
+  }
 });
