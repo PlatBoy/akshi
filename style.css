@@ -199,3 +199,28 @@ footer {
     padding-top: 3rem;
   }
 }
+
+.import-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+#importStatus {
+  margin-top: 0.75rem;
+}
+
+.muted-text {
+  color: var(--muted);
+}
+
+input[type='file'] {
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.6rem;
+  width: min(100%, 520px);
+}

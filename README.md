@@ -19,9 +19,15 @@ npm start
    - `Open on mobile (same Wi-Fi):`
 3. Open that link on your phone browser.
 
-Example:
+## Import from LinkedIn
 
-- `http://192.168.1.25:4173`
+Direct LinkedIn account/API import is not enabled in this local app.
+Instead, export your LinkedIn data and upload CSV files in the portfolio page:
+
+- `Skills.csv`
+- `Positions.csv`
+
+The page will automatically populate skills and experience cards from those files.
 
 ## If mobile still does not work
 

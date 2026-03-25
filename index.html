@@ -38,23 +38,7 @@
           <p>A few recent builds focused on speed, accessibility, and thoughtful design.</p>
         </div>
 
-        <div class="projects-grid">
-          <article class="card">
-            <h3>Finance Dashboard</h3>
-            <p>Analytics interface with reusable chart widgets and dark/light mode support.</p>
-            <span>HTML • CSS • JavaScript</span>
-          </article>
-          <article class="card">
-            <h3>Restaurant Landing Page</h3>
-            <p>High-conversion landing page with smooth scrolling and responsive menu layout.</p>
-            <span>Responsive Design • UI/UX</span>
-          </article>
-          <article class="card">
-            <h3>Task Planner App</h3>
-            <p>Productivity app with drag-and-drop task organization and local storage persistence.</p>
-            <span>JavaScript • LocalStorage</span>
-          </article>
-        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
       </section>
 
       <section class="container section">
@@ -62,6 +46,18 @@
           <h2>Skills</h2>
         </div>
         <ul class="skills-list" id="skillsList"></ul>
+      </section>
+
+      <section class="container section import-card">
+        <div class="section-head">
+          <h2>Import from LinkedIn Export</h2>
+          <p>
+            Upload CSV files from your LinkedIn data export (for example: <strong>Skills.csv</strong> and
+            <strong>Positions.csv</strong>) and this page will auto-fill skills and experience cards.
+          </p>
+        </div>
+        <input id="linkedinFiles" type="file" accept=".csv" multiple />
+        <p id="importStatus" class="muted-text">No LinkedIn files imported yet.</p>
       </section>
 
       <section id="contact" class="container section contact">
