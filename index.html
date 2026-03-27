@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Carter | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <span class="logo">AC</span>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </nav>
+      <div class="hero-content container">
+        <p class="eyebrow">Web Developer • Problem Solver</p>
+        <h1>Hi, I'm Alex. I build clean and fast web experiences.</h1>
+        <p class="subtitle">
+          Portfolio demo featuring modern CSS styling and JavaScript interactions for a polished first impression.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">View Projects</a>
+          <button id="themeToggle" class="btn btn-outline" type="button">Switch Theme</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="projects" class="container section">
+        <div class="section-head">
+          <h2>Featured Projects</h2>
+          <p>A few recent builds focused on speed, accessibility, and thoughtful design.</p>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid"></div>
+      </section>
+
+      <section class="container section">
+        <div class="section-head">
+          <h2>Skills</h2>
+        </div>
+        <ul class="skills-list" id="skillsList"></ul>
+      </section>
+
+      <section class="container section import-card">
+        <div class="section-head">
+          <h2>Import from LinkedIn Export</h2>
+          <p>
+            Upload CSV files from your LinkedIn data export (for example: <strong>Skills.csv</strong> and
+            <strong>Positions.csv</strong>) and this page will auto-fill skills and experience cards.
+          </p>
+        </div>
+        <input id="linkedinFiles" type="file" accept=".csv" multiple />
+        <p id="importStatus" class="muted-text">No LinkedIn files imported yet.</p>
+      </section>
+
+      <section id="contact" class="container section contact">
+        <h2>Let’s Build Something Great</h2>
+        <p>Email: hello@alexcarter.dev</p>
+        <a class="btn" href="mailto:hello@alexcarter.dev">Contact Me</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Alex Carter. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
